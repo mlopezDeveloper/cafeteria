@@ -1,0 +1,12 @@
+body {
+  background-color: red;
+  font-size: 4rem;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+div {
+  display: grid;
+  grid-template-columns: 3rem;
+}
