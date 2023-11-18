@@ -1,0 +1,37 @@
+/*
+@mixin color{
+    color: black;
+    font-size: 4rem;
+    text-decoration: none;
+}
+
+@mixin bgColor( $color ){
+    background-color: $color;
+}*/
+
+@use 'variables' as v;
+
+@mixin telefono{
+    @media (min-width: v.$telefono){
+        //directiva @content
+        @content;//es para que tome todo el contenido que le pasamos porque no sabemos cuanto le vamos a pasar
+    }
+}
+
+@mixin tablet{
+    @media (min-width: v.$tablet){
+        @content;//se inyecta todas las reglas de css qye escribamos
+    }
+}
+
+@mixin desktop{
+    @media (min-width: v.$desktop){
+        @content;
+    }
+}
+
+@mixin grid( $columnas, $espaciado ){ //definimos que va a tomar dos variables porque no siempre vamos a tener 3 columnas para el grid
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+}

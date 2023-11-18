@@ -10,13 +10,20 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
     "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-imagemin": "^4.1.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-sourcemaps-support": "^0.0.1",
+    "gulp-webp": "^4.0.1",
     "postcss": "^8.4.31",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "sharp": "^0.32.6"
   },
-  "browserslist": [ 
+  "browserslist": [
     "last 1 version",
     "> 1%"
   ]

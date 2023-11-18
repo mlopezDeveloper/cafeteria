@@ -1,0 +1,50 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.nuestro-menu{
+    background-image: url(../img/menu_arriba.svg),url(../img/menu_abajo.svg),linear-gradient(to top,
+    v.$primario, v.$primario);
+    background-repeat: no-repeat;
+    background-position: center 5rem, center 92%, 100%;
+    background-size: 200%;
+    padding: 15rem 2rem 20rem 2rem;
+
+    @include m.tablet { 
+        padding: 15rem 0 20rem 0;
+        background-size: 100%;
+    }
+    @include m.desktop { 
+        background-size: 50%,50%,100%; //imagen1,imagen2,color de fondo
+    }
+}
+
+.grid-menu{
+    @include m.tablet { 
+        @include m.grid(2, 2rem); //mixins, ya tenemos definido el bloque de codigo solo pasamos los valores que debe tomar
+    }
+}
+
+.menu{
+    h3{
+        color: v.$blanco;
+    }
+    li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p{
+            color: v.$blanco;
+            font-size: 2.2rem;
+            line-height: 1.5;
+            margin: 0 0 2rem 0;
+            span{
+                display: block;//salto de linea
+                color: v.$secundario;
+            }
+        }   
+        .precio{
+            font-size: 4rem;
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+//@use 'sass:math';
+
+.nav-principal{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    @include m.tablet { 
+        flex-direction: row;
+        //gap: math.div( v.$separacion, 4 );//operacion
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    a{
+        text-align: center;
+        color: v.$blanco;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        @include m.tablet { 
+            margin-bottom: 0;
+        }
+
+        &.activo{
+            color: v.$secundario;
+        }
+
+        &:hover{
+            color: v.$secundario;
+        }
+    }
+}

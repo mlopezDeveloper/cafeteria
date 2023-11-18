@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteria SASS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    <header class="header header-contacto">
+        <div class="contenido-header contenedor">
+            <div class="barra">
+                <div class="logo">
+                    <img src="build/img/logo.svg" alt="logo cafeteria">
+                </div>
+                <nav class="nav-principal">
+                    <a href="index.html">Inicio</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="proceso.html">Proceso</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="galeria.html">Galeria</a>
+                    <a class="activo" href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+            <div class="texto-header">
+                <h1>Mejores granos, mejor café</h1>
+            </div>
+        </div>
+    </header>
+    <main class="contenedor contenido-principal">
+        <h2><span>Reserva tu</span>mesa</h2>
+        <div class="contenido-contacto">
+            <form class="formulario">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Tu email">
+                </div>
+                <div class="campo">
+                    <label for="nombre">Número de Personas:</label>
+                    <select>
+                        <option value="" disabled selected>-- Seleccione --</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="mas">+4</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" min="09:00" max="18:00">
+                </div>
+                <div class="campo">
+                    <label for="fecha">fecha:</label>
+                    <input type="date" id="fecha">
+                </div>
+                <div class="campo">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="contenedor contenido-footer bg-white">
+            <div class="footer-box ubicacion">
+                <h3>Ubicación</h3>
+                <p>Nicolas Copérnico 5900</p>
+                <p>Guadalajara, Jalisco</p>
+            </div>
+            <div class="footer-box reservacion">
+                <h3>Reservacion</h3>
+                <p>Tel. 3850-9102</p>
+                <a href="tel:+38509102">Llamar</a>
+            </div>
+            <div class="footer-box horario">
+                <h3>Horario</h3>
+                <p>Lun-Juv: 11:00 - 22:00</p>
+                <p>Vie-Sab: 09:00 - 24:00</p>
+                <p>Domingo: Cerrado</p>
+            </div>
+        </div>
+        <p class="copyright">Todos los derechos reservador. La cafeteria</p>
+    </footer>
+</body>
+</html>
